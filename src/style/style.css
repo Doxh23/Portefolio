@@ -1,0 +1,252 @@
+*, *::after, *::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: rgb(255, 92, 80);
+  width: 100vw;
+  scroll-behavior: smooth;
+  overflow: hidden;
+  min-height: calc(100vh - 60px);
+  background-color: #001233;
+  display: flex;
+  flex-direction: column;
+  justify-items: start;
+}
+body #root {
+  width: 100%;
+}
+body #root .App {
+  width: 100%;
+}
+body .navBar {
+  background-color: rgb(255, 92, 80);
+  font-weight: 600;
+  font-size: 30px;
+  color: #001233;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+body .navBar ul {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  list-style: none;
+}
+body .navBar ul a {
+  color: #001233;
+  font-weight: 700;
+  transition: color 0.5s ease;
+}
+body .navBar ul a:hover {
+  color: whitesmoke;
+}
+body .container {
+  position: relative;
+  width: 100%;
+  min-height: calc(100vh - 60px);
+}
+body .container > * {
+  min-height: calc(100vh - 60px);
+  width: 100%;
+}
+body .container .home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+body .container .home .presentation {
+  font-weight: 600;
+  text-align: center;
+  width: auto;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+body .container .home .presentation .name {
+  color: whitesmoke;
+  font-weight: 800;
+}
+body .container .home .presentation hr {
+  width: 90%;
+  background-color: whitesmoke;
+}
+body .container .home .presentation a {
+  width: 100px;
+  color: rgb(255, 92, 80);
+  border: rgb(255, 92, 80) 2px dashed;
+  transition: all ease 0.5s;
+}
+body .container .home .presentation a:hover {
+  color: #001233;
+  background-color: rgb(255, 92, 80);
+}
+body .container .contact {
+  font-size: 20px;
+  width: 100%;
+  min-height: calc(100vh - 60px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+body .container .contact .element {
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+body .container .contact .element .email {
+  display: block;
+  color: rgb(255, 92, 80);
+  border: 2px solid rgb(255, 92, 80);
+  width: 150px;
+  line-height: 40px;
+  border-radius: 20px;
+  text-align: center;
+  font-weight: 600;
+  transition: all 0.5s ease;
+}
+body .container .contact .element .email:hover {
+  color: #001233;
+  background-color: rgb(255, 92, 80);
+}
+body .container .contact .element .socialNetwork {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+}
+body .container .contact .element .socialNetwork > a {
+  width: 20px;
+  height: 20px;
+  stroke: red;
+}
+body .container .contact .element .svgMedia {
+  width: 30px;
+  height: 30px;
+  transition: filter 0.5s ease;
+}
+body .container .contact .element .svgMedia:hover {
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(346deg) brightness(185%) contrast(103%);
+}
+body .container .works {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+body .container .works .listWorks {
+  position: relative;
+  overflow: hidden;
+  overflow-x: scroll;
+  width: 100%;
+  height: calc((100vh - 60px) * 0.25);
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+}
+body .container .works .listWorks::-webkit-scrollbar {
+  width: 12px;
+  height: 8px; /* width of the entire scrollbar */
+  position: absolute;
+}
+body .container .works .listWorks::-webkit-scrollbar-track {
+  background: transparent; /* color of the tracking area */
+}
+body .container .works .listWorks::-webkit-scrollbar-thumb {
+  background: rgba(255, 92, 80, 0.4);
+  border-radius: 20px;
+  filter: opacity(0.1);
+}
+body .container .works .listWorks::-webkit-scrollbar-thumb:hover {
+  background: rgb(255, 92, 80);
+}
+body .container .works .listWorks .miniWork {
+  overflow: scroll;
+  min-width: 220px;
+  height: 100%;
+  filter: opacity(0.3);
+  transition: filter 0.5s ease;
+}
+body .container .works .listWorks .miniWork:hover {
+  filter: opacity(1);
+}
+body .container .works .work {
+  background-repeat: no-repeat;
+  background-size: 100%;
+  position: relative;
+  height: calc((100vh - 60px) * 0.75);
+  border: 1px solid red;
+  width: 100%;
+  background: none;
+}
+body .container .works .work .leftArrow, body .container .works .work .rightArrow {
+  position: absolute;
+  width: 5%;
+  height: 100%;
+  background-color: rgb(255, 255, 255);
+  filter: opacity(0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .container .works .work .leftArrow:hover, body .container .works .work .rightArrow:hover {
+  filter: opacity(0.3);
+}
+body .container .works .work .leftArrow div, body .container .works .work .rightArrow div {
+  width: 100%;
+}
+body .container .works .work .leftArrow {
+  left: 0;
+}
+body .container .works .work .rightArrow {
+  right: 0;
+}
+body .container .works .leftArrow, body .container .works .rightArrow {
+  width: 33%;
+}
+
+.fade-enter {
+  opacity: 0;
+  z-index: 1;
+}
+
+.fade-enter.fade-enter-active {
+  opacity: 1;
+  transition: opacity 250ms ease-in;
+}
+
+.fade-exit.fade-exit-active {
+  opacity: 0;
+  transition: opacity 250ms ease-in;
+}
+
+.boxShadowSection > * {
+  border: 1px solid rgb(255, 92, 80);
+}
+
+.light {
+  pointer-events: none;
+  width: 250px;
+  height: 250px;
+  position: absolute;
+  top: 100px;
+  left: 50px;
+  background: radial-gradient(white, rgba(57, 132, 255, 0) 80%);
+  filter: blur(110px);
+  border-radius: 100%;
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,273 @@
+$primary: #001233;
+$secondary: rgb(255, 92, 80);
+$scrollbar : rgba(255, 92, 80,0.4);
+$thirdcolor :whitesmoke;
+$tailleHeightNavBar : 60px;
+$containerHeight : calc(100vh - $tailleHeightNavBar) ;
+$workHeight : calc($containerHeight  * 0.75);
+$listWork : calc($containerHeight  * 0.25);
+
+* , *::after , *::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: $secondary;
+  width: 100vw;
+  scroll-behavior: smooth;
+  overflow: hidden;
+  min-height: $containerHeight;
+  background-color: $primary;
+  display: flex;
+  flex-direction: column;
+  justify-items: start;
+  #root {
+    width: 100%;
+   .App{
+    width: 100%;
+   }
+  }
+  
+  .navBar {
+    background-color: $secondary;
+    font-weight: 600;
+    font-size: 30px;
+    color: $primary;
+    width: 100%;
+    height: $tailleHeightNavBar;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    ul {
+      display: flex;
+      flex-direction: row;
+      gap: 30px;
+      list-style: none;
+      a {
+        color: $primary;
+        font-weight: 700;
+        transition: color 0.5s ease;
+        &:hover {
+          color: $thirdcolor;
+        }
+      }
+    }
+  }
+.container{
+  position: relative;
+  width: 100%;
+  min-height: $containerHeight;
+  & > * {
+    min-height: $containerHeight;
+    width: 100%; 
+  }
+  .home{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .presentation{ 
+      font-weight: 600;
+      text-align: center;
+      width: auto; 
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      .name{
+        color: $thirdcolor;   
+        font-weight: 800;   
+      }
+     hr{
+      width: 90%;
+      background-color: $thirdcolor;
+     }
+     a{
+      width: 100px; 
+      color: $secondary;  
+      border: $secondary 2px dashed; 
+      transition : all ease 0.5s; 
+      &:hover{
+        color: $primary; 
+        background-color: $secondary;
+      } 
+     }
+    }
+  }
+  .contact{
+    font-size: 20px;
+    width: 100%;
+    min-height : $containerHeight;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .element{
+      height: 200px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 40px;
+      .email{
+        display: block;
+        color: $secondary;
+        border: 2px solid $secondary;
+        width: 150px; 
+        line-height: 40px;
+        border-radius: 20px;
+        text-align: center;
+        font-weight: 600 ;
+        transition: all 0.5s ease;
+        &:hover{
+          color: $primary;
+          background-color: $secondary;
+        }
+        
+      }
+      .socialNetwork{
+        display: flex;
+        flex-direction: row;
+        gap: 40px;
+      }
+      .socialNetwork > a {
+    width: 20px; 
+    height: 20px;
+    stroke: red;
+      }
+    .svgMedia{
+      width: 30px;
+      height: 30px;
+      transition: filter 0.5s  ease;
+      &:hover{
+        filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(346deg) brightness(185%) contrast(103%);
+      }
+    }
+    }
+  }
+
+  .works{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    .listWorks{
+      position: relative;
+      // background: coral; 
+      overflow: hidden; 
+      overflow-x: scroll;
+      width: 100%;
+      height: $listWork;
+      display: flex; 
+      flex-direction: row;
+      justify-content:left;
+      align-items: center;
+      &::-webkit-scrollbar {
+        width: 12px;  
+        height: 8px;             /* width of the entire scrollbar */
+        position: absolute;
+      }
+      
+      &::-webkit-scrollbar-track {
+        background: transparent;        /* color of the tracking area */
+      } 
+      
+      &::-webkit-scrollbar-thumb {
+        background: $scrollbar; 
+       
+        border-radius: 20px; 
+        filter: opacity(0.1);
+        &:hover{
+          background: $secondary;
+        }
+      }
+.miniWork{
+overflow :scroll;
+min-width: 220px;
+  height: 100%;
+  filter: opacity(0.3);
+  transition: filter 0.5s ease;
+  &:hover{
+    filter: opacity(1);
+  }
+}
+    }
+    .work{
+      background-repeat: no-repeat;
+      background-size: 100%; 
+      position: relative;
+      height: $workHeight;   
+      border: 1px solid red;
+      width: 100%;
+      background: none;
+     
+      .leftArrow, .rightArrow{
+        position: absolute;
+        width: 5%;
+        height: 100%;
+        background-color: rgb(255, 255, 255);
+        filter: opacity(0.1);
+display: flex;
+justify-content: center;
+align-items: center;
+&:hover{
+          filter: opacity(0.3);
+}
+  div{
+    width: 100%;
+  }
+      }
+      .leftArrow{       
+        left: 0;
+      }
+      .rightArrow{
+        right: 0;
+      }
+
+    }
+ 
+    .leftArrow , .rightArrow{
+      width: 33%;
+    }
+  }
+}
+
+}
+.fade-enter {
+  opacity: 0;
+  z-index: 1;
+}
+
+.fade-enter.fade-enter-active {
+  opacity: 1;
+  transition: opacity 250ms ease-in;
+}
+.fade-exit.fade-exit-active {
+  opacity: 0;
+  transition: opacity 250ms ease-in;
+}
+.boxShadowSection{
+
+  & > * {
+    border: 1px solid  $secondary;
+      }
+}
+
+
+.light{
+  pointer-events: none;
+  width: 250px;
+  height: 250px;
+  position: absolute;
+  top:  100px;  
+  left: 50px;
+  background: radial-gradient(white, #3984ff00 80%); 
+  filter: blur(110px);
+  border-radius: 100%; 
+}
