@@ -1,0 +1,53 @@
+{
+"skills" : {
+"backend" : ["sql","sqlServer","mongoDb","c#", "rest API"],
+"frontEnd" : ["html","css","javascript/TypeScript","Angular","react","bootstrap","nodeJS"]
+
+},
+
+"works" : [{
+    "id": 1,
+    "live" : "www.google",
+    "img" : "github.svg",
+    "github": "www.google.be"
+},
+{
+    "id" : 2,
+    "live" : "www.google",
+    "img" : "linkedin.svg",
+    "github": "www.google.be"
+},
+{
+    "id" : 3,
+    "live" : "www.google",
+    "img" : "test.png",
+    "github": "www.google.be"
+},
+{
+    "id" : 3,
+    "live" : "www.google",
+    "img" : "test.png",
+    "github": "www.google.be"
+},{
+    "id" : 3,
+    "live" : "www.google",
+    "img" : "test.png",
+    "github": "www.google.be"
+},{
+    "id" : 3,
+    "live" : "www.google",
+    "img" : "test.png",
+    "github": "www.google.be"
+},{
+    "id" : 3,
+    "live" : "www.google",
+    "img" : "test.png",
+    "github": "www.google.be"
+},{
+    "id" : 3,
+    "live" : "www.google",
+    "img" : "test.png",
+    "github": "www.google.be"
+}
+]
+}
