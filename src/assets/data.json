@@ -86,51 +86,9 @@
   "works": [
     {
       "id": 1,
-      "live": "www.google",
-      "img": "github.svg",
-      "github": "www.google.be"
-    },
-    {
-      "id": 2,
-      "live": "www.google",
-      "img": "linkedin.svg",
-      "github": "www.google.be"
-    },
-    {
-      "id": 3,
-      "live": "www.google",
-      "img": "test.png",
-      "github": "www.google.be"
-    },
-    {
-      "id": 3,
-      "live": "www.google",
-      "img": "test.png",
-      "github": "www.google.be"
-    },
-    {
-      "id": 3,
-      "live": "www.google",
-      "img": "test.png",
-      "github": "www.google.be"
-    },
-    {
-      "id": 3,
-      "live": "www.google",
-      "img": "test.png",
-      "github": "www.google.be"
-    },
-    {
-      "id": 3,
-      "live": "www.google",
-      "img": "test.png",
-      "github": "www.google.be"
-    },
-    {
-      "id": 3,
-      "live": "www.google",
-      "img": "test.png",
-      "github": "www.google.be"
+      "live": "https://stellar-treacle-1a3a4a.netlify.app/",
+      "img": "pokedex.png",
+      "github": "https://github.com/Doxh23/pokedex"
     }
   ]
 }
