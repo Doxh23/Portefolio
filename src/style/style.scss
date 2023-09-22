@@ -1,35 +1,58 @@
-$primary: #001233;
-$secondary: rgb(255, 92, 80);
-$scrollbar : rgba(255, 92, 80,0.4);
-$thirdcolor :whitesmoke;
-$tailleHeightNavBar : 60px;
-$containerHeight : calc(100vh - $tailleHeightNavBar) ;
-$workHeight : calc($containerHeight  * 0.75);
-$listWork : calc($containerHeight  * 0.25);
+$primary: #27282a;
+$secondary: rgb(235, 235, 235);
+$scrollbar: rgba(255, 255, 255, 0.3);
+$thirdcolor: #ff5c50;
+$tailleHeightNavBar: 60px;
+$containerHeight: calc(100vh - $tailleHeightNavBar);
+$aboutWidth: calc(100vw - 30%);
+$workHeight: calc($containerHeight * 0.85);
+$listWork: calc($containerHeight * 0.15);
 
-* , *::after , *::before {
+*,
+*::after,
+*::before {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
+* {
+  &::-webkit-scrollbar {
+    width: 12px;
+    height: 8px; /* width of the entire scrollbar */
+    position: absolute;
+  }
 
+  &::-webkit-scrollbar-track {
+    background: transparent; /* color of the tracking area */
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: $scrollbar;
+
+    border-radius: 20px;
+    filter: opacity(0.1);
+    &:hover {
+      background: $secondary;
+    }
+  }
+}
 body {
   color: $secondary;
   width: 100vw;
   scroll-behavior: smooth;
-  overflow: hidden;
   min-height: $containerHeight;
   background-color: $primary;
   display: flex;
   flex-direction: column;
   justify-items: start;
+
   #root {
     width: 100%;
-   .App{
-    width: 100%;
-   }
+    .App {
+      width: 100%;
+    }
   }
-  
+  ///////////////////////////////////////////////////////NAVBAR/////////////////////////////////////////////////////////////////////////
   .navBar {
     background-color: $secondary;
     font-weight: 600;
@@ -56,188 +79,319 @@ body {
       }
     }
   }
-.container{
-  position: relative;
-  width: 100%;
-  min-height: $containerHeight;
-  & > * {
-    min-height: $containerHeight;
-    width: 100%; 
-  }
-  .home{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    .presentation{ 
-      font-weight: 600;
-      text-align: center;
-      width: auto; 
-      height: auto;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      gap: 20px;
-      .name{
-        color: $thirdcolor;   
-        font-weight: 800;   
-      }
-     hr{
-      width: 90%;
-      background-color: $thirdcolor;
-     }
-     a{
-      width: 100px; 
-      color: $secondary;  
-      border: $secondary 2px dashed; 
-      transition : all ease 0.5s; 
-      &:hover{
-        color: $primary; 
-        background-color: $secondary;
-      } 
-     }
-    }
-  }
-  .contact{
-    font-size: 20px;
+
+  ///////////////////////////////////////////////// PRINCIPAL BOX CONTAINER /////////////////////////////////////////////////////////////////
+
+  .container {
+    position: relative;
     width: 100%;
-    min-height : $containerHeight;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    .element{
-      height: 200px;
+    min-height: $containerHeight;
+    & > * {
+      min-height: $containerHeight;
+      width: 100%;
+    }
+
+    //////////////////////////////////////////////HOME SECTION/////////////////////////////////////////////
+    .home {
+      font-size: 35px;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      gap: 40px;
-      .email{
-        display: block;
-        color: $secondary;
-        border: 2px solid $secondary;
-        width: 150px; 
-        line-height: 40px;
-        border-radius: 20px;
+      .presentation {
+        font-weight: 600;
         text-align: center;
-        font-weight: 600 ;
-        transition: all 0.5s ease;
-        &:hover{
-          color: $primary;
-          background-color: $secondary;
+        width: auto;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        .name {
+          color: $thirdcolor;
+          font-weight: 800;
         }
-        
+        hr {
+          width: 90%;
+          background-color: $thirdcolor;
+        }
+        a {
+          width: 200px;
+          color: $secondary;
+          border: $secondary 2px dashed;
+          transition: all ease 0.5s;
+          &:hover {
+            color: $primary;
+            background-color: $secondary;
+          }
+        }
       }
-      .socialNetwork{
+    }
+
+    ////////////////////////////////////////ABOUT SECTION ///////////////////////////////////////////////////////
+    .About {
+      display: flex;
+      flex-direction: column;
+      height: auto;
+      margin: auto;
+      align-items: center;
+      padding-top: 100px;
+      gap: 50px;
+      max-width: calc(100vw - 30%);
+      .me {
+        width: 300px;
+        height: 300px;
         display: flex;
         flex-direction: row;
-        gap: 40px;
-      }
-      .socialNetwork > a {
-    width: 20px; 
-    height: 20px;
-    stroke: red;
-      }
-    .svgMedia{
-      width: 30px;
-      height: 30px;
-      transition: filter 0.5s  ease;
-      &:hover{
-        filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(346deg) brightness(185%) contrast(103%);
-      }
-    }
-    }
-  }
-
-  .works{
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center; 
-    .listWorks{
-      position: relative;
-      // background: coral; 
-      overflow: hidden; 
-      overflow-x: scroll;
-      width: 100%;
-      height: $listWork;
-      display: flex; 
-      flex-direction: row;
-      justify-content:left;
-      align-items: center;
-      &::-webkit-scrollbar {
-        width: 12px;  
-        height: 8px;             /* width of the entire scrollbar */
-        position: absolute;
-      }
-      
-      &::-webkit-scrollbar-track {
-        background: transparent;        /* color of the tracking area */
-      } 
-      
-      &::-webkit-scrollbar-thumb {
-        background: $scrollbar; 
-       
-        border-radius: 20px; 
-        filter: opacity(0.1);
-        &:hover{
-          background: $secondary;
+        justify-content: center;
+        align-items: center;
+        img {
+          border: 8px solid $secondary;
+          border-radius: 100%;
+          width: 100%;
+          height: 100%;
         }
       }
-.miniWork{
-overflow :scroll;
-min-width: 220px;
-  height: 100%;
-  filter: opacity(0.3);
-  transition: filter 0.5s ease;
-  &:hover{
-    filter: opacity(1);
-  }
-}
+      .box {
+        & > * {
+          margin: 30px 0;
+        }
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        overflow: hidden;
+
+        h1 {
+          text-align: left;
+          width: 100%;
+        }
+
+        .List {
+          display: flex;
+
+          flex-direction: row;
+
+          justify-content: left;
+          align-items: flex-start;
+          width: 100%;
+          overflow: hidden;
+          overflow-x: scroll;
+          height: 300px;
+          gap: 30px;
+
+          .element {
+            border: 1px solid $secondary;
+            border-radius: 15px;
+            padding: 20px 10px;
+            background-color: $primary;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            min-width: 200px;
+            max-width: 200px;
+            height: 100%;
+
+            & > * {
+              width: 100%;
+              transition: all 0.5s ease-in;
+              font-weight: 600;
+            }
+            &:hover {
+              color: $primary;
+              background-color: $secondary;
+              box-shadow: 10px 10px 25px 1px $secondary;
+            }
+            .role {
+              text-align: center;
+              font-size: 20px;
+            }
+            .title{
+              text-align: center;
+              font-weight: 800;
+            }
+            .year {
+              text-align: center;
+            }
+          }
+        }
+
+        .skills {
+          .element {
+            display: flex;
+            align-items: center;
+            background-color: rgba(255, 255, 255, 0.1);
+            border: none;
+            img {
+              width: 80%;
+              height: 90%;
+            }
+            p {
+              font-size: 25px;
+              text-align: center;
+            }
+            &:hover {
+              background-color: none;
+            }
+          }
+        }
+      }
+
+      & > * {
+        width: $aboutWidth;
+      }
     }
-    .work{
-      background-repeat: no-repeat;
-      background-size: 100%; 
-      position: relative;
-      height: $workHeight;   
-      border: 1px solid red;
+
+    /////////////////////////////////////////////////////////////////////CONTACT SECTION /////////////////////////////////////////////////////
+    .contact {
+      font-size: 20px;
       width: 100%;
-      background: none;
-     
-      .leftArrow, .rightArrow{
-        position: absolute;
-        width: 5%;
-        height: 100%;
-        background-color: rgb(255, 255, 255);
-        filter: opacity(0.1);
-display: flex;
-justify-content: center;
-align-items: center;
-&:hover{
+      min-height: $containerHeight;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      .element {
+        height: 200px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+        .email {
+          font-size: 35px;
+          display: block;
+          color: $secondary;
+          border: 2px solid $secondary;
+          width: 350px;
+          line-height: 80px;
+          border-radius: 40px;
+          text-align: center;
+          font-weight: 600;
+          transition: all 0.5s ease;
+          &:hover {
+            color: $primary;
+            background-color: $secondary;
+          }
+        }
+        .socialNetwork {
+          display: flex;
+          flex-direction: row;
+          gap: 60px;
+        }
+        .socialNetwork > a {
+          width: 20px;
+          height: 20px;
+          stroke: red;
+        }
+        .svgMedia {
+          width: 50px;
+          height: 50px;
+          transition: filter 0.5s ease;
+          &:hover {
+            filter: invert(40%) sepia(71%) saturate(769%)
+              hue-rotate(320deg) brightness(109%) contrast(101%);
+          }
+        }
+      }
+    }
+
+    ////////////////////////////////////////////////////////////////////////////////WORKS SECTION//////////////////////////////////////////////////////////////////////
+    .works {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      height: 100%;
+      .listWorks {
+        position: relative;
+        overflow: hidden;
+        overflow-x: scroll;
+        width: 100%;
+        height: 220px;
+        display: flex;
+        flex-direction: row;
+        justify-content: left;
+        align-items: center;
+
+        .miniWork {
+          overflow: scroll;
+          min-width: 220px;
+          height: 100%;
+          overflow: hidden;
           filter: opacity(0.3);
-}
-  div{
-    width: 100%;
-  }
+          transition: filter 0.5s ease;
+          div {
+            font-weight: 900;
+            font-size: 35px;
+            overflow: hidden;
+            height: 100%;
+            width: 0;
+            transition: width 0.5s ease;
+            background: $scrollbar;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            a {
+              color: $primary;
+              &:hover {
+                color: white;
+              }
+            }
+          }
+          &:hover {
+            filter: opacity(1);
+          }
+          &:hover div {
+            width: 100%;
+          }
+        }
       }
-      .leftArrow{       
-        left: 0;
-      }
-      .rightArrow{
-        right: 0;
+      .work {
+        background-repeat: no-repeat;
+        background-size: 100%;
+        position: relative;
+        height: $workHeight;
+        border: 1px solid red;
+        width: 100%;
+        background: none;
+
+        .leftArrow,
+        .rightArrow {
+          position: absolute;
+          width: 5%;
+          height: 100%;
+          background-color: rgb(255, 255, 255);
+          filter: opacity(0.1);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          &:hover {
+            filter: opacity(0.3);
+          }
+          div {
+            width: 100%;
+          }
+        }
+        .leftArrow {
+          left: 0;
+        }
+        .rightArrow {
+          right: 0;
+        }
       }
 
-    }
- 
-    .leftArrow , .rightArrow{
-      width: 33%;
+      .leftArrow,
+      .rightArrow {
+        width: 33%;
+      }
     }
   }
-}
-
 }
 .fade-enter {
   opacity: 0;
@@ -252,22 +406,16 @@ align-items: center;
   opacity: 0;
   transition: opacity 250ms ease-in;
 }
-.boxShadowSection{
 
-  & > * {
-    border: 1px solid  $secondary;
-      }
-}
-
-
-.light{
+//////////////////////////////////////////////////////LIGHT ///////////////////////////////////////////////////////////
+.light {
   pointer-events: none;
   width: 250px;
   height: 250px;
   position: absolute;
-  top:  100px;  
+  top: 100px;
   left: 50px;
-  background: radial-gradient(white, #3984ff00 80%); 
+  background: radial-gradient(white, #3984ff00 80%);
   filter: blur(110px);
-  border-radius: 100%; 
+  border-radius: 100%;
 }

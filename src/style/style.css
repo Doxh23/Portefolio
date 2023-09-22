@@ -1,16 +1,34 @@
-*, *::after, *::before {
+*,
+*::after,
+*::before {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
+*::-webkit-scrollbar {
+  width: 12px;
+  height: 8px; /* width of the entire scrollbar */
+  position: absolute;
+}
+*::-webkit-scrollbar-track {
+  background: transparent; /* color of the tracking area */
+}
+*::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 20px;
+  filter: opacity(0.1);
+}
+*::-webkit-scrollbar-thumb:hover {
+  background: rgb(235, 235, 235);
+}
+
 body {
-  color: rgb(255, 92, 80);
+  color: rgb(235, 235, 235);
   width: 100vw;
   scroll-behavior: smooth;
-  overflow: hidden;
   min-height: calc(100vh - 60px);
-  background-color: #001233;
+  background-color: #27282a;
   display: flex;
   flex-direction: column;
   justify-items: start;
@@ -22,10 +40,10 @@ body #root .App {
   width: 100%;
 }
 body .navBar {
-  background-color: rgb(255, 92, 80);
+  background-color: rgb(235, 235, 235);
   font-weight: 600;
   font-size: 30px;
-  color: #001233;
+  color: #27282a;
   width: 100%;
   height: 60px;
   display: flex;
@@ -40,12 +58,12 @@ body .navBar ul {
   list-style: none;
 }
 body .navBar ul a {
-  color: #001233;
+  color: #27282a;
   font-weight: 700;
   transition: color 0.5s ease;
 }
 body .navBar ul a:hover {
-  color: whitesmoke;
+  color: #ff5c50;
 }
 body .container {
   position: relative;
@@ -57,6 +75,7 @@ body .container > * {
   width: 100%;
 }
 body .container .home {
+  font-size: 35px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -74,22 +93,125 @@ body .container .home .presentation {
   gap: 20px;
 }
 body .container .home .presentation .name {
-  color: whitesmoke;
+  color: #ff5c50;
   font-weight: 800;
 }
 body .container .home .presentation hr {
   width: 90%;
-  background-color: whitesmoke;
+  background-color: #ff5c50;
 }
 body .container .home .presentation a {
-  width: 100px;
-  color: rgb(255, 92, 80);
-  border: rgb(255, 92, 80) 2px dashed;
+  width: 200px;
+  color: rgb(235, 235, 235);
+  border: rgb(235, 235, 235) 2px dashed;
   transition: all ease 0.5s;
 }
 body .container .home .presentation a:hover {
-  color: #001233;
-  background-color: rgb(255, 92, 80);
+  color: #27282a;
+  background-color: rgb(235, 235, 235);
+}
+body .container .About {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  margin: auto;
+  align-items: center;
+  padding-top: 100px;
+  gap: 50px;
+  max-width: calc(100vw - 30%);
+}
+body .container .About .me {
+  width: 300px;
+  height: 300px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+body .container .About .me img {
+  border: 8px solid rgb(235, 235, 235);
+  border-radius: 100%;
+  width: 100%;
+  height: 100%;
+}
+body .container .About .box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  overflow: hidden;
+}
+body .container .About .box > * {
+  margin: 30px 0;
+}
+body .container .About .box h1 {
+  text-align: left;
+  width: 100%;
+}
+body .container .About .box .List {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: flex-start;
+  width: 100%;
+  overflow: hidden;
+  overflow-x: scroll;
+  height: 300px;
+  gap: 30px;
+}
+body .container .About .box .List .element {
+  border: 1px solid rgb(235, 235, 235);
+  border-radius: 15px;
+  padding: 20px 10px;
+  background-color: #27282a;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  min-width: 200px;
+  max-width: 200px;
+  height: 100%;
+}
+body .container .About .box .List .element > * {
+  width: 100%;
+  transition: all 0.5s ease-in;
+  font-weight: 600;
+}
+body .container .About .box .List .element:hover {
+  color: #27282a;
+  background-color: rgb(235, 235, 235);
+  box-shadow: 10px 10px 25px 1px rgb(235, 235, 235);
+}
+body .container .About .box .List .element .role {
+  text-align: center;
+  font-size: 20px;
+}
+body .container .About .box .List .element .title {
+  text-align: center;
+  font-weight: 800;
+}
+body .container .About .box .List .element .year {
+  text-align: center;
+}
+body .container .About .box .skills .element {
+  display: flex;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: none;
+}
+body .container .About .box .skills .element img {
+  width: 80%;
+  height: 90%;
+}
+body .container .About .box .skills .element p {
+  font-size: 25px;
+  text-align: center;
+}
+body .container .About .box .skills .element:hover {
+  background-color: none;
+}
+body .container .About > * {
+  width: calc(100vw - 30%);
 }
 body .container .contact {
   font-size: 20px;
@@ -109,24 +231,25 @@ body .container .contact .element {
   gap: 40px;
 }
 body .container .contact .element .email {
+  font-size: 35px;
   display: block;
-  color: rgb(255, 92, 80);
-  border: 2px solid rgb(255, 92, 80);
-  width: 150px;
-  line-height: 40px;
-  border-radius: 20px;
+  color: rgb(235, 235, 235);
+  border: 2px solid rgb(235, 235, 235);
+  width: 350px;
+  line-height: 80px;
+  border-radius: 40px;
   text-align: center;
   font-weight: 600;
   transition: all 0.5s ease;
 }
 body .container .contact .element .email:hover {
-  color: #001233;
-  background-color: rgb(255, 92, 80);
+  color: #27282a;
+  background-color: rgb(235, 235, 235);
 }
 body .container .contact .element .socialNetwork {
   display: flex;
   flex-direction: row;
-  gap: 40px;
+  gap: 60px;
 }
 body .container .contact .element .socialNetwork > a {
   width: 20px;
@@ -134,67 +257,77 @@ body .container .contact .element .socialNetwork > a {
   stroke: red;
 }
 body .container .contact .element .svgMedia {
-  width: 30px;
-  height: 30px;
+  width: 50px;
+  height: 50px;
   transition: filter 0.5s ease;
 }
 body .container .contact .element .svgMedia:hover {
-  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(346deg) brightness(185%) contrast(103%);
+  filter: invert(40%) sepia(71%) saturate(769%) hue-rotate(320deg) brightness(109%) contrast(101%);
 }
 body .container .works {
   position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
+  height: 100%;
 }
 body .container .works .listWorks {
   position: relative;
   overflow: hidden;
   overflow-x: scroll;
   width: 100%;
-  height: calc((100vh - 60px) * 0.25);
+  height: 220px;
   display: flex;
   flex-direction: row;
   justify-content: left;
   align-items: center;
 }
-body .container .works .listWorks::-webkit-scrollbar {
-  width: 12px;
-  height: 8px; /* width of the entire scrollbar */
-  position: absolute;
-}
-body .container .works .listWorks::-webkit-scrollbar-track {
-  background: transparent; /* color of the tracking area */
-}
-body .container .works .listWorks::-webkit-scrollbar-thumb {
-  background: rgba(255, 92, 80, 0.4);
-  border-radius: 20px;
-  filter: opacity(0.1);
-}
-body .container .works .listWorks::-webkit-scrollbar-thumb:hover {
-  background: rgb(255, 92, 80);
-}
 body .container .works .listWorks .miniWork {
   overflow: scroll;
   min-width: 220px;
   height: 100%;
+  overflow: hidden;
   filter: opacity(0.3);
   transition: filter 0.5s ease;
 }
+body .container .works .listWorks .miniWork div {
+  font-weight: 900;
+  font-size: 35px;
+  overflow: hidden;
+  height: 100%;
+  width: 0;
+  transition: width 0.5s ease;
+  background: rgba(255, 255, 255, 0.3);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+body .container .works .listWorks .miniWork div a {
+  color: #27282a;
+}
+body .container .works .listWorks .miniWork div a:hover {
+  color: white;
+}
 body .container .works .listWorks .miniWork:hover {
   filter: opacity(1);
+}
+body .container .works .listWorks .miniWork:hover div {
+  width: 100%;
 }
 body .container .works .work {
   background-repeat: no-repeat;
   background-size: 100%;
   position: relative;
-  height: calc((100vh - 60px) * 0.75);
+  height: calc((100vh - 60px) * 0.85);
   border: 1px solid red;
   width: 100%;
   background: none;
 }
-body .container .works .work .leftArrow, body .container .works .work .rightArrow {
+body .container .works .work .leftArrow,
+body .container .works .work .rightArrow {
   position: absolute;
   width: 5%;
   height: 100%;
@@ -204,10 +337,12 @@ body .container .works .work .leftArrow, body .container .works .work .rightArro
   justify-content: center;
   align-items: center;
 }
-body .container .works .work .leftArrow:hover, body .container .works .work .rightArrow:hover {
+body .container .works .work .leftArrow:hover,
+body .container .works .work .rightArrow:hover {
   filter: opacity(0.3);
 }
-body .container .works .work .leftArrow div, body .container .works .work .rightArrow div {
+body .container .works .work .leftArrow div,
+body .container .works .work .rightArrow div {
   width: 100%;
 }
 body .container .works .work .leftArrow {
@@ -216,7 +351,8 @@ body .container .works .work .leftArrow {
 body .container .works .work .rightArrow {
   right: 0;
 }
-body .container .works .leftArrow, body .container .works .rightArrow {
+body .container .works .leftArrow,
+body .container .works .rightArrow {
   width: 33%;
 }
 
@@ -233,10 +369,6 @@ body .container .works .leftArrow, body .container .works .rightArrow {
 .fade-exit.fade-exit-active {
   opacity: 0;
   transition: opacity 250ms ease-in;
-}
-
-.boxShadowSection > * {
-  border: 1px solid rgb(255, 92, 80);
 }
 
 .light {

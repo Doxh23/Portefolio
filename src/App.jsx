@@ -17,7 +17,7 @@ import {
 function App() {
   const [cursorPosition,setCursorPosition] = useState({x: null,y:null})
   document.querySelector("body").addEventListener("mousemove", function(e){
-    setCursorPosition({x:e.clientX-125,y:e.clientY-125})
+    setCursorPosition({x:e.pageX-125,y:e.pageY-124})
   
   })
   const routes = [

@@ -1,53 +1,136 @@
 {
-"skills" : {
-"backend" : ["sql","sqlServer","mongoDb","c#", "rest API"],
-"frontEnd" : ["html","css","javascript/TypeScript","Angular","react","bootstrap","nodeJS"]
 
-},
+  "experience": [
+   
+    {
+      "id": 2,
 
-"works" : [{
-    "id": 1,
-    "live" : "www.google",
-    "img" : "github.svg",
-    "github": "www.google.be"
-},
-{
-    "id" : 2,
-    "live" : "www.google",
-    "img" : "linkedin.svg",
-    "github": "www.google.be"
-},
-{
-    "id" : 3,
-    "live" : "www.google",
-    "img" : "test.png",
-    "github": "www.google.be"
-},
-{
-    "id" : 3,
-    "live" : "www.google",
-    "img" : "test.png",
-    "github": "www.google.be"
-},{
-    "id" : 3,
-    "live" : "www.google",
-    "img" : "test.png",
-    "github": "www.google.be"
-},{
-    "id" : 3,
-    "live" : "www.google",
-    "img" : "test.png",
-    "github": "www.google.be"
-},{
-    "id" : 3,
-    "live" : "www.google",
-    "img" : "test.png",
-    "github": "www.google.be"
-},{
-    "id" : 3,
-    "live" : "www.google",
-    "img" : "test.png",
-    "github": "www.google.be"
-}
-]
+      "name": "Technifutur",
+      "role": "Developpeur .Net",
+      "desc": "formation en .net/Angular et les technologies qui les entourent",
+      "year": "2023-2024"
+    },
+    {
+      "id": 3,
+
+      "name": "Esomus",
+      "role": "Développeur php",
+      "desc": "conception d'un site wordpress et travail sur une 'pseudo IA' en oop ",
+      "year": "2022"
+    },
+    {
+      "id": 4,
+
+      "name": "Mcdonald",
+      "role": "ouvrier polyvalent",
+      "desc": "principalement en cuisine, gestion de stock, ouverture fermeture du restaurant, accueil des nouveaux collaborateurs",
+      "year": "2014 - 2021"
+    }
+  ],
+  "formations": [
+    {
+      "id": 1,
+      "name": "Bac informatique - developpement logiciel",
+      "desc": "en cours de réalisation",
+      "year": "2023 - 2027"
+    },
+    {
+      "id": 2,
+
+      "name": "Bachelier Comptabilité",
+      "desc": "3ieme année fréquenté",
+      "year": "2016 - 2020"
+    } , {
+      "id": 3,
+
+      "name": "technicien en informatique",
+      "desc": "reussite avec distinction",
+      "year": "2014 - 2016"
+    }
+    
+  ],
+  "skills" : [
+    {
+      "title":"HTML5",
+      "img": "Html.svg"
+    },
+    {
+      "title":"CSS",
+      "img": "css.svg"
+    },
+    {
+      "title":"javascript",
+      "img": "javascript.svg"
+    },
+    {
+      "title":"C#",
+      "img": "cSharp.svg"
+    },
+    {
+      "title":"SQL",
+      "img": "sql.svg"
+    },
+    {
+      "title":"ASP .NET",
+      "img": "asp.svg"
+    },
+    {
+      "title":"REACT",
+      "img": "react.svg"
+    },
+    {
+      "title":"ANGULAR",
+      "img": "angularjs.svg"
+    }
+  ],
+  "works": [
+    {
+      "id": 1,
+      "live": "www.google",
+      "img": "github.svg",
+      "github": "www.google.be"
+    },
+    {
+      "id": 2,
+      "live": "www.google",
+      "img": "linkedin.svg",
+      "github": "www.google.be"
+    },
+    {
+      "id": 3,
+      "live": "www.google",
+      "img": "test.png",
+      "github": "www.google.be"
+    },
+    {
+      "id": 3,
+      "live": "www.google",
+      "img": "test.png",
+      "github": "www.google.be"
+    },
+    {
+      "id": 3,
+      "live": "www.google",
+      "img": "test.png",
+      "github": "www.google.be"
+    },
+    {
+      "id": 3,
+      "live": "www.google",
+      "img": "test.png",
+      "github": "www.google.be"
+    },
+    {
+      "id": 3,
+      "live": "www.google",
+      "img": "test.png",
+      "github": "www.google.be"
+    },
+    {
+      "id": 3,
+      "live": "www.google",
+      "img": "test.png",
+      "github": "www.google.be"
+    }
+  ]
 }

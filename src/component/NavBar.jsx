@@ -6,6 +6,7 @@ export const Navbar = ({route}) => {
   return (
     <>
     <div className='navBar'>
+      
     <ul>
        {route.map(route => (
         <li key={route.name}><Link to={route.path} >{route.name}</Link></li>

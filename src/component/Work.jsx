@@ -34,16 +34,22 @@ console.log(data.works[id])
     <div className='fade works'>
     <div className='listWorks'>
      {
-      data.works.map((work,i) => {
-        
-        return <img src={`../assets/${work.img}`} className='miniWork' key={i} onMouseEnter={() => setid(i)}  /> 
+      data && data.works.map((work,i) => {
+         
+        return <div style={{background : `url(../assets/${work.img})`,backgroundRepeat : "no-repeat" ,backgroundSize : "cover"}} className='miniWork' key={i} onMouseEnter={() => setid(i)}  > 
+        <div className='linkProject'>
+          <a href="linkGithub">Github</a>
+          <a href="linkLive"> Live</a>
+          </div>
+          
+          </div>  
       })
      }
     </div>
        <div className="work" ref={ref} style={  { backgroundRepeat:"no-repeat",backgroundSize: "100% 100%"}}>
 
     
-      
+  
     <div className='leftArrow' >
       
     <div onClick={() => handleChange(-1)} ><img src={left} alt="left"  className='arrow'/></div>
