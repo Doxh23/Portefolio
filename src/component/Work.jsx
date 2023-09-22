@@ -43,8 +43,11 @@ export const Work = () => {
                   onMouseEnter={() => setid(i)}
                 >
                   <div className="linkProject">
-                    <a href={work.github}>Github</a>
-                    <a href={work.live}> Live</a>
+                    <h6>{work.name}</h6>
+                    <div>
+                      <a href={work.github}>Github</a>
+                      { work.hasOwnProperty("live") ? (<a href={work.live}> Live</a>) : "" } 
+                    </div>
                   </div>
                 </div>
               );

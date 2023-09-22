@@ -300,7 +300,7 @@ body .container .works .listWorks .miniWork div {
   transition: width 0.5s ease;
   background: rgba(255, 255, 255, 0.3);
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 20px;
@@ -310,6 +310,14 @@ body .container .works .listWorks .miniWork div a {
 }
 body .container .works .listWorks .miniWork div a:hover {
   color: white;
+}
+body .container .works .listWorks .miniWork div div {
+  display: flex;
+  flex-direction: row;
+  background: transparent;
+}
+body .container .works .listWorks .miniWork div h6 {
+  color: #ff5c50;
 }
 body .container .works .listWorks .miniWork:hover {
   filter: opacity(1);

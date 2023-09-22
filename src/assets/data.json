@@ -86,9 +86,37 @@
   "works": [
     {
       "id": 1,
+      "name":"pokedex",
       "live": "https://stellar-treacle-1a3a4a.netlify.app/",
       "img": "pokedex.png",
       "github": "https://github.com/Doxh23/pokedex"
+    },
+    {
+      "id" : 2,
+      "name": "netflix clone",
+      "live": "https://yelnetflix.netlify.app/",
+      "img": "netflix.png",
+      "github": "https://github.com/Doxh23/netflix"
+    },
+    {
+      "id" : 3,
+      "name" : "hero vs monster",
+      "img" : "HeroVSMonster.png",
+      "github": "https://github.com/Doxh23/heroes-Vs-Monster"
+    }
+    ,{
+      "id":6,
+      "name":"beat-them-all",
+      "live" : "https://doxh23.github.io/beat-them-all/",
+      "img" :"Portefolio.png",
+      "github": "https://technifuturportefolioadrien.netlify.app/"
+    },
+    {
+      "id":4,
+      "name":"Portefolio",
+      "live" : "https://technifuturportefolioadrien.netlify.app/",
+      "img" :"BeatThemAll.png",
+      "github": "https://github.com/Doxh23/beat-them-all"
     }
   ]
 }
