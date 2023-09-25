@@ -45,8 +45,8 @@ export const Work = () => {
                   <div className="linkProject">
                     <h6>{work.name}</h6>
                     <div>
-                      <a href={work.github}>Github</a>
-                      { work.hasOwnProperty("live") ? (<a href={work.live}> Live</a>) : "" } 
+                      <a href={work.github} target='_blank'>Github</a>
+                      { work.hasOwnProperty("live") ? (<a href={work.live} target='_blank'> Live</a>) : "" } 
                     </div>
                   </div>
                 </div>
