@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import ReactFancyBox from 'react-fancybox';
 import 'react-fancybox/lib/fancybox.css';
 
 export const Navbar = ({ route }) => {
