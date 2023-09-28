@@ -1,7 +1,5 @@
 {
-
   "experience": [
-   
     {
       "id": 2,
 
@@ -40,83 +38,93 @@
       "name": "Bachelier Comptabilité",
       "desc": "3ieme année fréquenté",
       "year": "2016 - 2020"
-    } , {
+    },
+    {
       "id": 3,
 
       "name": "technicien en informatique",
       "desc": "reussite avec distinction",
       "year": "2014 - 2016"
     }
-    
   ],
-  "skills" : [
+  "skills": [
     {
-      "title":"HTML5",
+      "title": "HTML5",
       "img": "Html.svg"
     },
     {
-      "title":"CSS",
+      "title": "CSS",
       "img": "css.svg"
     },
     {
-      "title":"javascript",
+      "title": "javascript",
       "img": "javascript.svg"
     },
     {
-      "title":"C#",
+      "title": "C#",
       "img": "cSharp.svg"
     },
     {
-      "title":"SQL",
+      "title": "SQL",
       "img": "sql.svg"
     },
     {
-      "title":"ASP .NET",
+      "title": "ASP .NET",
       "img": "asp.svg"
     },
     {
-      "title":"REACT",
+      "title": "REACT",
       "img": "react.svg"
     },
     {
-      "title":"ANGULAR",
+      "title": "ANGULAR",
       "img": "angularjs.svg"
     }
   ],
   "works": [
     {
       "id": 1,
-      "name":"pokedex",
+      "name": "pokedex",
       "live": "https://stellar-treacle-1a3a4a.netlify.app/",
       "img": "pokedex.png",
-      "github": "https://github.com/Doxh23/pokedex"
+      "technologie": "react",
+      "github": "https://github.com/Doxh23/pokedex",
+      "status": "finished"
     },
     {
-      "id" : 2,
+      "id": 2,
       "name": "netflix clone",
       "live": "https://yelnetflix.netlify.app/",
       "img": "netflix.png",
-      "github": "https://github.com/Doxh23/netflix"
+      "technologie": "react",
+      "github": "https://github.com/Doxh23/netflix",
+      "status": "finished"
     },
     {
-      "id" : 3,
-      "name" : "hero vs monster",
-      "img" : "HeroVSMonster.png",
-      "github": "https://github.com/Doxh23/heroes-Vs-Monster"
-    }
-    ,{
-      "id":6,
-      "name":"beat-them-all",
-      "live" : "https://doxh23.github.io/beat-them-all/",
-      "img" :"Portefolio.png",
-      "github": "https://technifuturportefolioadrien.netlify.app/"
+      "id": 3,
+      "name": "hero vs monster",
+      "img": "HeroVSMonster.png",
+      "technologie": "c#",
+      "github": "https://github.com/Doxh23/heroes-Vs-Monster",
+      "status": "finished"
     },
     {
-      "id":4,
-      "name":"Portefolio",
-      "live" : "https://technifuturportefolioadrien.netlify.app/",
-      "img" :"BeatThemAll.png",
-      "github": "https://github.com/Doxh23/beat-them-all"
+      "id": 6,
+      "name": "beat-them-all",
+      "live": "https://doxh23.github.io/beat-them-all/",
+      "img": "Portefolio.png",
+      "technologie": "javascript vanilla",
+      "github": "https://technifuturportefolioadrien.netlify.app/",
+      "status": "finished"
+    },
+    {
+      "id": 4,
+      "name": "Portefolio",
+      "live": "https://technifuturportefolioadrien.netlify.app/",
+      "img": "BeatThemAll.png",
+      "technologie": "react",
+      "github": "https://github.com/Doxh23/beat-them-all",
+      "status": "finished"
     }
   ]
 }

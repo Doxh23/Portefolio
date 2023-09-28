@@ -6,11 +6,21 @@ export const About = () => {
     <div className="About fade boxShadowSection">
       <div className="me">
         <img src="./assets/me.jpg" alt="" />
-        
       </div>
       <div className="box ">
-      <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut vitae tempore alias, officia quas fugit porro, nihil voluptates esse laboriosam error excepturi molestias repudiandae ipsum atque, nesciunt laborum perferendis sit.
-        Atque dicta laborum ad, quia eius nesciunt repellat expedita cupiditate voluptates magni similique distinctio facilis iure suscipit eveniet. Nesciunt et suscipit rem dolorem, ipsum laboriosam ex porro asperiores totam aspernatur.</p>
+        <p>
+          {' '}
+          Bonjour, je suis <strong>Adrien Péters</strong> , développeur .net/Angular
+          junior. j’ai commencé à m’auto-former sur les langages HTML
+          et CSS. En 2021, j’ai alors intégré un bootcamp (Be code
+          Liege) en 2021 dans lequel j’ai pu consolider ces acquis et
+          travailler sur d’autres domaines
+          (Javascript/react).Actuellement je suis en formation de 10
+          mois en .net/Angular Depuis juin 2023 . Passionné par
+          l'informatique, j'ai decidé de reprendre en cours du soir un
+          bachelier en informatique pour apprendre tout ce qui entoure
+          l'informatique et consolider mes connaissances .{' '}
+        </p>
 
         <h1>Skills</h1>
         <div className="List skills">
@@ -18,15 +28,14 @@ export const About = () => {
             data.skills.map((ex) => {
               return (
                 <div className="element" key={ex.title}>
-                 <img src={`assets/${ex.img}`} alt="" />
-                 <p>{ex.title}</p>
+                  <img src={`assets/${ex.img}`} alt="" />
+                  <p>{ex.title}</p>
                 </div>
               );
             })}
         </div>
       </div>
       <div className="box">
-
         <h1>Experiences</h1>
         <div className="List">
           {data &&

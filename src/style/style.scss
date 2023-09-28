@@ -314,7 +314,7 @@ body {
         height: 220px;
         display: flex;
         flex-direction: row;
-        justify-content: left;
+        justify-content: center;
         align-items: center;
 
         .miniWork {
@@ -337,7 +337,7 @@ body {
             justify-content: center;
             align-items: center;
             gap: 20px;
-           
+
             a {
               color: $primary;
               &:hover {
@@ -348,9 +348,11 @@ body {
               display: flex;
               flex-direction: row;
               background: transparent;
-            
             }
-            h6{
+            h6 {
+              color: $thirdcolor;
+            }
+            p{
               color: $thirdcolor;
             }
           }
@@ -371,35 +373,11 @@ body {
         width: 100%;
         background: none;
 
-        .leftArrow,
-        .rightArrow {
-          position: absolute;
-          width: 5%;
-          height: 100%;
-          background-color: rgb(255, 255, 255);
-          filter: opacity(0.1);
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          &:hover {
-            filter: opacity(0.3);
-          }
-          div {
-            width: 100%;
-          }
-        }
-        .leftArrow {
-          left: 0;
-        }
-        .rightArrow {
-          right: 0;
-        }
+    
+   
       }
 
-      .leftArrow,
-      .rightArrow {
-        width: 33%;
-      }
+     
     }
   }
 }
@@ -428,4 +406,24 @@ body {
   background: radial-gradient(white, #3984ff00 80%);
   filter: blur(110px);
   border-radius: 100%;
+}
+
+@media screen and (max-width: 1100px) {
+  .light{
+    display: none;
+  }
+  .listWorks {
+    justify-content: left !important;
+  }
+}
+
+
+@media screen and (max-width: 500px) {
+.navBar{
+  ul{
+    a{
+      font-size: 20px ;
+    }
+  }
+}
 }

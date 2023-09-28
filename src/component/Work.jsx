@@ -44,9 +44,19 @@ export const Work = () => {
                 >
                   <div className="linkProject">
                     <h6>{work.name}</h6>
+                    <p>{work.status}</p>
                     <div>
-                      <a href={work.github} target='_blank'>Github</a>
-                      { work.hasOwnProperty("live") ? (<a href={work.live} target='_blank'> Live</a>) : "" } 
+                      <a href={work.github} target="_blank">
+                        Github
+                      </a>
+                      {work.hasOwnProperty('live') ? (
+                        <a href={work.live} target="_blank">
+                          {' '}
+                          Live
+                        </a>
+                      ) : (
+                        ''
+                      )}
                     </div>
                   </div>
                 </div>
@@ -60,20 +70,7 @@ export const Work = () => {
             backgroundRepeat: 'no-repeat',
             backgroundSize: '100% 100%',
           }}
-        >
-          <div className="leftArrow">
-            <div onClick={() => handleChange(-1)}>
-              <img src={left} alt="left" className="arrow" />
-            </div>
-          </div>
-
-          <div className="rightArrow">
-            <div onClick={() => handleChange(1)}>
-              {' '}
-              <img src={right} alt="right" className="arrow" />
-            </div>
-          </div>
-        </div>
+        ></div>
       </div>
     </>
   );

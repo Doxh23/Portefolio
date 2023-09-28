@@ -280,7 +280,7 @@ body .container .works .listWorks {
   height: 220px;
   display: flex;
   flex-direction: row;
-  justify-content: left;
+  justify-content: center;
   align-items: center;
 }
 body .container .works .listWorks .miniWork {
@@ -319,6 +319,9 @@ body .container .works .listWorks .miniWork div div {
 body .container .works .listWorks .miniWork div h6 {
   color: #ff5c50;
 }
+body .container .works .listWorks .miniWork div p {
+  color: #ff5c50;
+}
 body .container .works .listWorks .miniWork:hover {
   filter: opacity(1);
 }
@@ -333,35 +336,6 @@ body .container .works .work {
   border: 1px solid red;
   width: 100%;
   background: none;
-}
-body .container .works .work .leftArrow,
-body .container .works .work .rightArrow {
-  position: absolute;
-  width: 5%;
-  height: 100%;
-  background-color: rgb(255, 255, 255);
-  filter: opacity(0.1);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-body .container .works .work .leftArrow:hover,
-body .container .works .work .rightArrow:hover {
-  filter: opacity(0.3);
-}
-body .container .works .work .leftArrow div,
-body .container .works .work .rightArrow div {
-  width: 100%;
-}
-body .container .works .work .leftArrow {
-  left: 0;
-}
-body .container .works .work .rightArrow {
-  right: 0;
-}
-body .container .works .leftArrow,
-body .container .works .rightArrow {
-  width: 33%;
 }
 
 .fade-enter {
@@ -389,4 +363,18 @@ body .container .works .rightArrow {
   background: radial-gradient(white, rgba(57, 132, 255, 0) 80%);
   filter: blur(110px);
   border-radius: 100%;
+}
+
+@media screen and (max-width: 1100px) {
+  .light {
+    display: none;
+  }
+  .listWorks {
+    justify-content: left !important;
+  }
+}
+@media screen and (max-width: 500px) {
+  .navBar ul a {
+    font-size: 20px;
+  }
 }/*# sourceMappingURL=style.css.map */
