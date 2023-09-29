@@ -1,9 +1,11 @@
 import React from 'react';
 import data from '../assets/data.json';
+import { Helmet } from 'react-helmet';
 
 export const About = () => {
   return (
     <div className="About fade boxShadowSection">
+      <Helmet> <title> Adrien Péters / About</title></Helmet>
       <div className="me">
         <img src="./assets/me.jpg" alt="" />
       </div>
@@ -16,7 +18,7 @@ export const About = () => {
           Liege) en 2021 dans lequel j’ai pu consolider ces acquis et
           travailler sur d’autres domaines
           (Javascript/react).Actuellement je suis en formation de 10
-          mois en .net/Angular Depuis juin 2023 . Passionné par
+          mois en .net/Angular Depuis mai 2023 . Passionné par
           l'informatique, j'ai decidé de reprendre en cours du soir un
           bachelier en informatique pour apprendre tout ce qui entoure
           l'informatique et consolider mes connaissances .{' '}

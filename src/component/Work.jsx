@@ -1,8 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { Link, useParams, useNavigate } from 'react-router-dom';
 import data from '../assets/data.json';
-import left from '../assets/leftArrow.svg';
-import right from '../assets/rightArrow.svg';
+import { Helmet } from 'react-helmet';
 export const Work = () => {
   const [id, setid] = useState(0);
   const ref = useRef(null);
@@ -27,6 +25,9 @@ export const Work = () => {
   console.log(id);
   return (
     <>
+    <Helmet>
+      <title> Adrien Péters / Work</title>
+    </Helmet>
       <div className="fade works">
         <div className="listWorks">
           {data &&

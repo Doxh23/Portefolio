@@ -1,6 +1,4 @@
-import React, { useRef, useState, createRef } from 'react';
-import reactLogo from './assets/react.svg';
-import viteLogo from '/vite.svg';
+import React, {  useState, createRef } from 'react';
 import './style/style.css';
 import { Navbar } from './component/NavBar';
 import { Route, Routes, useLocation } from 'react-router-dom';
@@ -8,10 +6,10 @@ import { About } from './component/About';
 import { Work } from './component/Work';
 import { Contact } from './component/Contact';
 import { Home } from './component/Home';
+import {Helmet} from "react-helmet"
 import {
   SwitchTransition,
   CSSTransition,
-  TransitionGroup,
 } from 'react-transition-group';
 
 function App() {
@@ -56,6 +54,10 @@ function App() {
 
   return (
     <div className="App">
+      <Helmet >
+      <title>Adrien Péters</title>
+        <meta name="description" content="portefolio" />
+      </Helmet>
       <Navbar route={route} />
       <SwitchTransition>
         <CSSTransition
@@ -76,7 +78,7 @@ function App() {
                   </div>
                 }
                 ref={route.nodeRef}
-              />
+              /> 
             ))}
           </Routes>
         </CSSTransition>
