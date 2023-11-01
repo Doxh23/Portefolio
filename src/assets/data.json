@@ -125,6 +125,14 @@
       "technologie": "react",
       "github": "https://github.com/Doxh23/beat-them-all",
       "status": "finished"
+    },
+    {
+      "id": 5,
+      "name": "api gestion d'evenement",
+      "img" : "Event_Api.png",
+      "technologie" : "asp .net api",
+      "github" : "https://github.com/Doxh23/GestionEvenementLabo",
+      "status": "finished"
     }
   ]
 }
