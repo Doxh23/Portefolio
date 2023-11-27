@@ -87,20 +87,20 @@
       "name": "pokedex",
       "live": "https://stellar-treacle-1a3a4a.netlify.app/",
       "img": "pokedex.png",
-      "technologie": ["react"],
+      "technologie": ["react","scss","tailwind"],
       "github": "https://github.com/Doxh23/pokedex",
       "status": "finished",
-      "commentaire" : "test commentaire"
+      "commentaire" : "utilisation de l'api 'pokemon api' en react"
     },
     {
       "id": 2,
       "name": "netflix clone",
       "live": "https://yelnetflix.netlify.app/",
       "img": "netflix.png",
-      "technologie": ["react"],
+      "technologie": ["react","scss"],
       "github": "https://github.com/Doxh23/netflix",
       "status": "finished",
-      "commentaire" : "test commentaire"
+      "commentaire" : "utilisation de l'api 'the movie db' en react "
 
     },
     {
@@ -110,7 +110,7 @@
       "technologie": ["c#"],
       "github": "https://github.com/Doxh23/heroes-Vs-Monster",
       "status": "finished",
-      "commentaire" : "test commentaire"
+      "commentaire" : "premier 'gros projet' en c# "
 
     },
     {
@@ -121,7 +121,7 @@
       "technologie": ["javascript vanilla"],
       "github": "https://technifuturportefolioadrien.netlify.app/",
       "status": "finished",
-      "commentaire" : "test commentaire"
+      "commentaire" : "petit jeu en js vanilla"
 
     },
     {
@@ -129,20 +129,20 @@
       "name": "Portefolio",
       "live": "https://technifuturportefolioadrien.netlify.app/",
       "img": "Portefolio.png",
-      "technologie": ["react","react_router","scss"],
+      "technologie": ["react","scss"],
       "github": "https://github.com/Doxh23/beat-them-all",
       "status": "finished",
-      "commentaire" : "test commentaire"
+      "commentaire" : "portefolio fait en react"
 
     },
     {
       "id": 5,
       "name": "api gestion d'evenement",
       "img" : "Event_Api.png",
-      "technologie" :["asp api"],
+      "technologie" :["c#","asp api"],
       "github" : "https://github.com/Doxh23/GestionEvenementLabo",
       "status": "finished",
-      "commentaire" : "test commentaire"
+      "commentaire" : "creation d'une api pour un labo technifutur en asp .net api"
 
     }
   ]
