@@ -20,7 +20,7 @@ export const Work = () => {
                                     style={{
                                         background: `url(../assets/${el.img})`,
                                         backgroundRepeat: 'no-repeat',
-                                        backgroundSize: '100% auto',
+                                        backgroundSize: '100% 100%',
                                     }}
                                 >
                                     <div className="links">

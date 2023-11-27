@@ -324,17 +324,17 @@ body {
                 justify-content: center;
                 grid-template-columns: repeat(auto-fit, 600px);
                 grid-column-gap: 30px;
-                grid-row-gap: 30px;
+                grid-row-gap: 30px; 
                 max-width: 1300px;
                 .element {
                     background-color: $primary;
                     background-size: cover;
                     width: 600px;
-                    height: 500px;
+                    min-height: 500px;
                     border: 4px solid $secondary;
                     border-bottom-left-radius: 15px;
                     border-bottom-right-radius: 15px;
-                    &:hover .links {
+                    &:hover .links { 
                         width: 100%;
                     }
                     .links {
@@ -436,12 +436,9 @@ body {
     .light {
         display: none;
     }
-    .listWorks {
-        justify-content: left !important;
-    }
+
 }
-@media screen and (max-width: 610px) {
-}
+
 @media screen and (max-width: 650px) {
     .home {
         .presentation {
@@ -453,7 +450,7 @@ body {
             a {
                 font-size: 20px;
             }
-        }
+        } 
     }
     body {
         .container {
@@ -463,7 +460,13 @@ body {
                     max-width: 650px;
                     .element {
                         width: 300px;
-                        min-height: 500px;
+                        .screen{
+                          height: 40%;
+
+                        }
+                        .information{
+                          height: 60%;
+                        }
                     }
                 }
             }
