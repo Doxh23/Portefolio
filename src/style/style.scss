@@ -11,440 +11,527 @@ $listWork: calc($containerHeight * 0.15);
 *,
 *::after,
 *::before {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 * {
-  &::-webkit-scrollbar {
-    width: 12px;
-    height: 8px; /* width of the entire scrollbar */
-    position: absolute;
-  }
-
-  &::-webkit-scrollbar-track {
-    background: transparent; /* color of the tracking area */
-  }
-
-  &::-webkit-scrollbar-thumb {
-    background: $scrollbar;
-
-    border-radius: 20px;
-    filter: opacity(0.1);
-    &:hover {
-      background: $secondary;
+    &::-webkit-scrollbar {
+        width: 12px;
+        height: 8px; /* width of the entire scrollbar */
+        position: absolute;
     }
-  }
+
+    &::-webkit-scrollbar-track {
+        background: transparent; /* color of the tracking area */
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: $scrollbar;
+
+        border-radius: 20px;
+        filter: opacity(0.1);
+        &:hover {
+            background: $secondary;
+        }
+    }
 }
 body {
-  color: $secondary;
-  width: 100vw;
-  scroll-behavior: smooth;
-  min-height: $containerHeight;
-  background-color: $primary;
-  display: flex;
-  flex-direction: column;
-  justify-items: start;
-
-  #root {
-    width: 100%;
-    .App {
-      width: 100%;
-    }
-  }
-  ///////////////////////////////////////////////////////NAVBAR/////////////////////////////////////////////////////////////////////////
-  .navBar {
-    background-color: $secondary;
-    font-weight: 600;
-    font-size: 30px;
-    color: $primary;
-    width: 100%;
-    height: $tailleHeightNavBar;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    ul {
-      display: flex;
-      flex-direction: row;
-      gap: 30px;
-      list-style: none;
-      a {
-        color: $primary;
-        font-weight: 700;
-        transition: color 0.5s ease;
-        &:hover {
-          color: $thirdcolor;
-        }
-      }
-    }
-  }
-
-  ///////////////////////////////////////////////// PRINCIPAL BOX CONTAINER /////////////////////////////////////////////////////////////////
-
-  .container {
-    position: relative;
-    width: 100%;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman',
+        serif;
+    color: $secondary;
+    width: 100vw;
+    scroll-behavior: smooth;
     min-height: $containerHeight;
-    & > * {
-      min-height: $containerHeight;
-      width: 100%;
-    }
+    background-color: $primary;
+    display: flex;
+    flex-direction: column;
+    justify-items: start;
 
-    //////////////////////////////////////////////HOME SECTION/////////////////////////////////////////////
-    .home {
-      font-size: 35px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      .presentation {
-        font-weight: 600;
-        text-align: center;
-        width: auto;
-        height: auto;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 20px;
-        .name {
-          color: $thirdcolor;
-          font-weight: 800;
+    #root {
+        width: 100%;
+        .App {
+            width: 100%;
         }
-        hr {
-          width: 90%;
-          background-color: $thirdcolor;
-        }
-        a {
-          width: 200px;
-          color: $secondary;
-          border: $secondary 2px dashed;
-          transition: all ease 0.5s;
-          &:hover {
-            color: $primary;
-            background-color: $secondary;
-          }
-        }
-      }
     }
-
-    ////////////////////////////////////////ABOUT SECTION ///////////////////////////////////////////////////////
-    .About {
-      display: flex;
-      flex-direction: column;
-      height: auto;
-      margin: auto;
-      align-items: center;
-      padding-top: 100px;
-      gap: 50px;
-      max-width: calc(100vw - 30%);
-      .me {
-        width: 300px;
-        height: 300px;
+    ///////////////////////////////////////////////////////NAVBAR/////////////////////////////////////////////////////////////////////////
+    .navBar {
+        background-color: $secondary;
+        font-weight: 900;
+        font-size: 40px;
+        color: $primary;
+        width: 100%;
+        height: $tailleHeightNavBar;
         display: flex;
         flex-direction: row;
         justify-content: center;
         align-items: center;
-        img {
-          border: 8px solid $secondary;
-          border-radius: 100%;
-          width: 100%;
-          height: 100%;
-        }
-      }
-      .box {
-        & > * {
-          margin: 30px 0;
-        }
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        overflow: hidden;
-
-        h1 {
-          text-align: left;
-          width: 100%;
-        }
-
-        .List {
-          display: flex;
-
-          flex-direction: row;
-
-          justify-content: left;
-          align-items: flex-start;
-          width: 100%;
-          overflow: hidden;
-          overflow-x: scroll;
-          height: 300px;
-          gap: 30px;
-
-          .element {
-            border: 1px solid $secondary;
-            border-radius: 15px;
-            padding: 20px 10px;
-            background-color: $primary;
+        ul {
             display: flex;
-            flex-direction: column;
-            align-items: flex-end;
-            min-width: 200px;
-            max-width: 200px;
-            height: 100%;
-
-            & > * {
-              width: 100%;
-              transition: all 0.5s ease-in;
-              font-weight: 600;
+            flex-direction: row;
+            gap: 30px;
+            list-style: none;
+            a {
+                color: $primary;
+                font-weight: 700;
+                transition: color 0.5s ease;
+                &:hover {
+                    color: $thirdcolor;
+                }
             }
-            &:hover {
-              color: $primary;
-              background-color: $secondary;
-              box-shadow: 10px 10px 25px 1px $secondary;
-            }
-            .role {
-              text-align: center;
-              font-size: 20px;
-            }
-            .title {
-              text-align: center;
-              font-weight: 800;
-            }
-            .year {
-              text-align: center;
-            }
-          }
         }
-
-        .skills {
-          .element {
-            display: flex;
-            align-items: center;
-            background-color: rgba(255, 255, 255, 0.1);
-            border: none;
-            img {
-              width: 80%;
-              height: 90%;
-            }
-            p {
-              font-size: 25px;
-              text-align: center;
-            }
-            &:hover {
-              background-color: none;
-            }
-          }
-        }
-      }
-
-      & > * {
-        width: $aboutWidth;
-      }
     }
 
-    /////////////////////////////////////////////////////////////////////CONTACT SECTION /////////////////////////////////////////////////////
-    .contact {
-      font-size: 20px;
-      width: 100%;
-      min-height: $containerHeight;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      .element {
-        height: 200px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 40px;
-        .email {
-          font-size: 35px;
-          display: block;
-          color: $secondary;
-          border: 2px solid $secondary;
-          width: 350px;
-          line-height: 80px;
-          border-radius: 40px;
-          text-align: center;
-          font-weight: 600;
-          transition: all 0.5s ease;
-          &:hover {
-            color: $primary;
-            background-color: $secondary;
-          }
-        }
-        .socialNetwork {
-          display: flex;
-          flex-direction: row;
-          gap: 60px;
-        }
-        .socialNetwork > a {
-          width: 20px;
-          height: 20px;
-          stroke: red;
-        }
-        .svgMedia {
-          width: 50px;
-          height: 50px;
-          transition: filter 0.5s ease;
-          &:hover {
-            filter: invert(40%) sepia(71%) saturate(769%)
-              hue-rotate(320deg) brightness(109%) contrast(101%);
-          }
-        }
-      }
-    }
+    ///////////////////////////////////////////////// PRINCIPAL BOX CONTAINER /////////////////////////////////////////////////////////////////
 
-    ////////////////////////////////////////////////////////////////////////////////WORKS SECTION//////////////////////////////////////////////////////////////////////
-    .works {
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      align-items: center;
-      height: 100%;
-      .listWorks {
+    .container {
         position: relative;
-        overflow: hidden;
-        overflow-x: scroll;
         width: 100%;
-        height: 220px;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
+        min-height: $containerHeight;
+        & > * {
+            min-height: $containerHeight;
+            width: 100%;
+        }
 
-        .miniWork {
-          overflow: scroll;
-          min-width: 220px;
-          height: 100%;
-          overflow: hidden;
-          filter: opacity(0.3);
-          transition: filter 0.5s ease;
-          div {
-            font-weight: 900;
+        //////////////////////////////////////////////HOME SECTION/////////////////////////////////////////////
+        .home {
             font-size: 35px;
-            overflow: hidden;
-            height: 100%;
-            width: 0;
-            transition: width 0.5s ease;
-            background: $scrollbar;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            gap: 20px;
-
-            a {
-              color: $primary;
-              &:hover {
-                color: white;
-              }
+            .presentation {
+                font-weight: 600;
+                text-align: center;
+                width: auto;
+                height: auto;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 20px;
+                .name {
+                    color: $thirdcolor;
+                    font-weight: 800;
+                }
+                hr {
+                    width: 90%;
+                    background-color: $thirdcolor;
+                }
+                a {
+                    width: 200px;
+                    color: $secondary;
+                    border: $secondary 2px dashed;
+                    transition: all ease 0.5s;
+                    &:hover {
+                        color: $primary;
+                        background-color: $secondary;
+                    }
+                }
             }
-            div {
-              display: flex;
-              flex-direction: row;
-              background: transparent;
-            }
-            h6 {
-              color: $thirdcolor;
-            }
-            p{
-              color: $thirdcolor;
-            }
-          }
-          &:hover {
-            filter: opacity(1);
-          }
-          &:hover div {
-            width: 100%;
-          }
         }
-      }
-      .work {
-        background-repeat: no-repeat;
-        background-size: 100%;
-        position: relative;
-        height: $workHeight;
-        border: 1px solid red;
-        width: 100%;
-        background: none;
 
-    
-   
-      }
+        ////////////////////////////////////////ABOUT SECTION ///////////////////////////////////////////////////////
+        .About {
+            display: flex;
+            flex-direction: column;
+            height: auto;
+            margin: auto;
+            align-items: center;
+            padding-top: 100px;
+            gap: 50px;
+            max-width: calc(100vw - 30%);
+            .me {
+                width: 300px;
+                height: 300px;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                img {
+                    border: 8px solid $secondary;
+                    border-radius: 100%;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            .box {
+                & > * {
+                    margin: 30px 0;
+                }
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                overflow: hidden;
 
-     
+                h1 {
+                    text-align: left;
+                    width: 100%;
+                }
+
+                .List {
+                    display: flex;
+
+                    flex-direction: row;
+
+                    justify-content: left;
+                    align-items: flex-start;
+                    width: 100%;
+                    overflow: hidden;
+                    overflow-x: scroll;
+                    height: 300px;
+                    gap: 30px;
+
+                    .element {
+                        border: 1px solid $secondary;
+                        border-radius: 15px;
+                        padding: 20px 10px;
+                        background-color: $primary;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: flex-end;
+                        min-width: 200px;
+                        max-width: 200px;
+                        height: 100%;
+
+                        & > * {
+                            width: 100%;
+                            transition: all 0.5s ease-in;
+                            font-weight: 600;
+                        }
+                        &:hover {
+                            color: $primary;
+                            background-color: $secondary;
+                            box-shadow: 10px 10px 25px 1px $secondary;
+                        }
+                        .role {
+                            text-align: center;
+                            font-size: 20px;
+                        }
+                        .title {
+                            text-align: center;
+                            font-weight: 800;
+                        }
+                        .year {
+                            text-align: center;
+                        }
+                    }
+                }
+
+                .skills {
+                    .element {
+                        display: flex;
+                        align-items: center;
+                        background-color: rgba(255, 255, 255, 0.1);
+                        border: none;
+                        img {
+                            width: 80%;
+                            height: 90%;
+                        }
+                        p {
+                            font-size: 25px;
+                            text-align: center;
+                        }
+                        &:hover {
+                            background-color: none;
+                        }
+                    }
+                }
+            }
+
+            & > * {
+                width: $aboutWidth;
+            }
+        }
+
+        /////////////////////////////////////////////////////////////////////CONTACT SECTION /////////////////////////////////////////////////////
+        .contact {
+            font-size: 20px;
+            width: 100%;
+            min-height: $containerHeight;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            .element {
+                height: 200px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 40px;
+                .email {
+                    font-size: 35px;
+                    display: block;
+                    color: $secondary;
+                    border: 2px solid $secondary;
+                    width: 350px;
+                    line-height: 80px;
+                    border-radius: 40px;
+                    text-align: center;
+                    font-weight: 600;
+                    transition: all 0.5s ease;
+                    &:hover {
+                        color: $primary;
+                        background-color: $secondary;
+                    }
+                }
+                .socialNetwork {
+                    display: flex;
+                    flex-direction: row;
+                    gap: 60px;
+                }
+                .socialNetwork > a {
+                    width: 20px;
+                    height: 20px;
+                    stroke: red;
+                }
+                .svgMedia {
+                    width: 50px;
+                    height: 50px;
+                    transition: filter 0.5s ease;
+                    &:hover {
+                        filter: invert(40%) sepia(71%) saturate(769%)
+                            hue-rotate(320deg) brightness(109%)
+                            contrast(101%);
+                    }
+                }
+            }
+        }
+
+        ////////////////////////////////////////////////////////////////////////////////WORKS SECTION//////////////////////////////////////////////////////////////////////
+        .works {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            height: 100%;
+            h2 {
+                margin: 30px;
+                font-weight: 900;
+                font-size: 70px;
+            }
+            .list {
+                margin-top: 40px;
+                background-color: transparent;
+
+                width: 80%;
+                height: auto;
+                display: grid;
+                justify-content: center;
+                grid-template-columns: repeat(auto-fit, 600px);
+                grid-column-gap: 30px;
+                grid-row-gap: 30px;
+                max-width: 1300px;
+                .element {
+                    background-color: $primary;
+                    background-size: cover;
+                    width: 600px;
+                    height: 500px;
+                    border: 4px solid $secondary;
+                    border-bottom-left-radius: 15px;
+                    border-bottom-right-radius: 15px;
+                    &:hover .links {
+                        width: 100%;
+                    }
+                    .links {
+                        background-color: rgba(39, 40, 42, 0.5);
+                        overflow: hidden;
+                        width: 0;
+                        transition: width 0.5s ease-out;
+                        height: 100%;
+                        font-size: 45px;
+                        display: flex;
+                        flex-direction: row;
+                        gap: 120px;
+                        justify-content: center;
+                        align-items: center;
+                        & > a {
+                            color: white;
+                            font-weight: 600;
+                            font-size: 30px;
+                            &:hover {
+                                color: $thirdcolor;
+                            }
+                        }
+                    }
+                    .screen {
+                        height: 60%;
+                        width: 100%;
+                    }
+                    .information {
+                        display: flex;
+                        flex-direction: column;
+                        width: 100%;
+                        height: 40%;
+                        border-top: none;
+
+                        gap: 20px 0;
+                        padding: 10px;
+                        h4 {
+                            text-align: center;
+                            font-size: 30px;
+                        }
+                        p {
+                            text-align: left;
+                            font-size: 20px;
+                        }
+                        .technology {
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: center;
+                            align-items: center;
+                            gap: 20px;
+                            & > span {
+                                background-color: lighten(
+                                    $secondary,
+                                    80%
+                                );
+                                height: 30px;
+                                width: 120px;
+                                text-align: center;
+                                border-radius: 12px;
+                                color: $primary;
+                                font-weight: 600;
+                                font-size: 20px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            //   .listWorks {
+            //     position: relative;
+            //     overflow: hidden;
+            //     overflow-x: scroll;
+            //     width: 100%;
+            //     height: 220px;
+            //     display: flex;
+            //     flex-direction: row;
+            //     justify-content: center;
+            //     align-items: center;
+
+            //     .miniWork {
+            //       overflow: scroll;
+            //       min-width: 220px;
+            //       height: 100%;
+            //       overflow: hidden;
+            //       filter: opacity(0.3);
+            //       transition: filter 0.5s ease;
+            //       div {
+            //         font-weight: 900;
+            //         font-size: 35px;
+            //         overflow: hidden;
+            //         height: 100%;
+            //         width: 0;
+            //         transition: width 0.5s ease;
+            //         background: $scrollbar;
+            //         display: flex;
+            //         flex-direction: column;
+            //         justify-content: center;
+            //         align-items: center;
+            //         gap: 20px;
+
+            //         a {
+            //           color: $primary;
+            //           &:hover {
+            //             color: white;
+            //           }
+            //         }
+            //         div {
+            //           display: flex;
+            //           flex-direction: row;
+            //           background: transparent;
+            //         }
+            //         h6 {
+            //           color: $thirdcolor;
+            //         }
+            //         p{
+            //           color: $thirdcolor;
+            //         }
+            //       }
+            //       &:hover {
+            //         filter: opacity(1);
+            //       }
+            //       &:hover div {
+            //         width: 100%;
+            //       }
+            //     }
+            //   }
+            //   .work {
+            //     background-repeat: no-repeat;
+            //     background-size: 100%;
+            //     position: relative;
+            //     height: $workHeight;
+            //     border: 1px solid red;
+            //     width: 100%;
+            //     background: none;
+
+            //   }
+        }
     }
-  }
 }
 .fade-enter {
-  opacity: 0;
-  z-index: 1;
+    opacity: 0;
+    z-index: 1;
 }
 
 .fade-enter.fade-enter-active {
-  opacity: 1;
-  transition: opacity 250ms ease-in;
+    opacity: 1;
+    transition: opacity 250ms ease-in;
 }
 .fade-exit.fade-exit-active {
-  opacity: 0;
-  transition: opacity 250ms ease-in;
+    opacity: 0;
+    transition: opacity 250ms ease-in;
 }
 
 //////////////////////////////////////////////////////LIGHT ///////////////////////////////////////////////////////////
 .light {
-  pointer-events: none;
-  width: 250px;
-  height: 250px;
-  position: absolute;
-  top: 100px;
-  left: 50px;
-  background: radial-gradient(white, #3984ff00 80%);
-  filter: blur(110px);
-  border-radius: 100%;
+    pointer-events: none;
+    width: 250px;
+    height: 250px;
+    position: absolute;
+    top: 100px;
+    left: 50px;
+    background: radial-gradient(white, #3984ff00 80%);
+    filter: blur(110px);
+    border-radius: 100%;
 }
 
 @media screen and (max-width: 1100px) {
-  .light{
-    display: none;
-  }
-  .listWorks {
-    justify-content: left !important;
-  }
+    .light {
+        display: none;
+    }
+    .listWorks {
+        justify-content: left !important;
+    }
 }
-
 
 @media screen and (max-width: 550px) {
-  .home{
-    .presentation{
-      font-size: 25px;
-
+    .home {
+        .presentation {
+            font-size: 25px;
+        }
     }
-  }
-.navBar{
-  ul{
-    a{  
-      font-size: 20px ;
+    .navBar {
+        ul {
+            a {
+                font-size: 20px;
+            }
+        }
     }
-  }
 }
-
-}
-
 
 @media screen and (max-width: 400px) {
- 
-  .navBar{
-    ul{
-      gap: 10px;
-      a{
-        font-size: 15px ;
-      }
+    .navBar {
+        ul {
+            gap: 10px;
+            a {
+                font-size: 15px;
+            }
+        }
     }
-  }
- 
-  }
+}
