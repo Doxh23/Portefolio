@@ -397,12 +397,20 @@ body .container .works .list .element .information .technology > span {
     justify-content: left !important;
   }
 }
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 650px) {
   .home .presentation {
     font-size: 25px;
   }
   .navBar ul a {
     font-size: 20px;
+  }
+  body .container .works .list {
+    grid-template-columns: repeat(auto-fit, 300px);
+    max-width: 650px;
+  }
+  body .container .works .list .element {
+    width: 300px;
+    min-height: 500px;
   }
 }
 @media screen and (max-width: 400px) {

@@ -1,28 +1,8 @@
+// @ts-nocheck
 import React, { useEffect, useRef, useState } from 'react';
 import data from '../assets/data.json';
 import { Helmet } from 'react-helmet';
 export const Work = () => {
-    // const [id, setid] = useState(0);
-    // const ref = useRef(null);
-    // console.log(data.works[id]);
-    // ref.current.style.background = `../assets${data.works[id].img}`
-    // useEffect(() => {
-    //   console.log(ref.current.style);
-    //   ref.current.style.background = `url(../assets/${data.works[id].img})`;
-    //   ref.current.style.backgroundRepeat = 'no-repeat';
-    //   ref.current.style.backgroundSize = '100% 100%';
-    // }, [id, ref]);
-    // function handleChange(nbr) {
-    //   console.log(data.works[id]);
-    //   if (data.works[id + nbr] === undefined) {
-    //     setid(nbr > 0 ? 0 : data.works.length - 1);
-    //   } else {
-    //     setid(id + nbr);
-    //   }
-
-    //   ref.current.style.background = `../assets${data.works[id].img}`;
-    // }
-    // console.log(id);
     return (
         <>
             <Helmet>
@@ -40,16 +20,27 @@ export const Work = () => {
                                     style={{
                                         background: `url(../assets/${el.img})`,
                                         backgroundRepeat: 'no-repeat',
-                                        backgroundSize: '680px 400px',
+                                        backgroundSize: '100% auto',
                                     }}
                                 >
-                                  <div className='links'>
-                                    <a target='_blank' href={`${el.github}`}>Github</a>
-                                    {
-                                     el.hasOwnProperty('live') ? <a target='_blank' href={`${el.live}`}>Live</a> : ""
-                                    }
-                                     
-                                  </div>
+                                    <div className="links">
+                                        <a
+                                            target="_blank"
+                                            href={`${el.github}`}
+                                        >
+                                            Github
+                                        </a>
+                                        {el.hasOwnProperty('live') ? (
+                                            <a
+                                                target="_blank"
+                                                href={`${el.live}`}
+                                            >
+                                                Live
+                                            </a>
+                                        ) : (
+                                            ''
+                                        )}
+                                    </div>
                                 </div>
 
                                 <div className="information">
