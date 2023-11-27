@@ -115,19 +115,19 @@
     },
     {
       "id": 6,
-      "name": "beat-them-all",
-      "live": "https://doxh23.github.io/beat-them-all/",
+      "name": "Portefolio",
+      "live": "https://github.com/Doxh23/Portefolio",
       "img": "BeatThemAll.png",
       "technologie": ["javascript vanilla"],
-      "github": "https://technifuturportefolioadrien.netlify.app/",
+      "github": "https://portefolio-adrien-peters.netlify.app/",
       "status": "finished",
       "commentaire" : "petit jeu en js vanilla"
 
     },
     {
       "id": 4,
-      "name": "Portefolio",
-      "live": "https://technifuturportefolioadrien.netlify.app/",
+      "name": "beat them all",
+      "live": "https://doxh23.github.io/beat-them-all/",
       "img": "Portefolio.png",
       "technologie": ["react","scss"],
       "github": "https://github.com/Doxh23/beat-them-all",
